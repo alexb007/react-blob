@@ -27,7 +27,7 @@ const Shape = styled.div`
       100% {
         border-radius: ${props.radius2};
       }
-    `} ${(Math.random() * 10) | (0 + 10)}s ease-in-out infinite both alternate,
+    `} ${(Math.random() * 3) | (0 + 10)}s ease-in-out infinite both alternate,
       ${spin} ${spinParams};
   `}
 `;
