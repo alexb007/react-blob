@@ -6,7 +6,7 @@ const spin = keyframes`
     transform: rotate(1turn);
   }
 `;
-const spinParams = "200s linear infinite";
+const spinParams = "200s ease infinite";
 
 const Shape = styled.div`
   transition: border-radius 1s ease-out;
@@ -27,7 +27,7 @@ const Shape = styled.div`
       100% {
         border-radius: ${props.radius2};
       }
-    `} ${(Math.random() * 3) | (0 + 10)}s ease-in-out infinite both alternate,
+    `} ${(Math.random() * 3) | (0 + 3)}s ease-in-out infinite both alternate,
       ${spin} ${spinParams};
   `}
 `;
@@ -52,19 +52,7 @@ const randomRadiuses = (x: number) =>
     .fill(1)
     .map(() => radiuses[(Math.random() * radiuses.length) | 0])
     .join(" ");
-const radiuses = [
-  "80%",
-  "75%",
-  "70%",
-  "65%",
-  "60%",
-  "55%",
-  "50%",
-  "45%",
-  "40%",
-  "35%",
-  "30%"
-];
+const radiuses = ["75%", "70%", "65%", "60%", "55%", "50%", "45%", "40%"];
 const makeRadius1 = () => randomRadiuses(4) + " / " + randomRadiuses(4);
 const makeRadius2 = () => randomRadiuses(2);
 
