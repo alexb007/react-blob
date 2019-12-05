@@ -6,7 +6,7 @@ const spin = keyframes`
     transform: rotate(1turn);
   }
 `;
-const spinParams = "200s ease infinite";
+const spinParams = "200s linear infinite";
 
 const Shape = styled.div`
   transition: border-radius 1s ease-out;
